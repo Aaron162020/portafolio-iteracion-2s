@@ -1,0 +1,16 @@
+#Suma de matrices
+
+
+def suma_matrices(m,m2):
+    res=[]
+    largo=len(m)
+    fila=0
+    columna=0
+    while fila!=largo-1:
+        while columna!=len(m[fila])-1:
+            columna=0
+            fila+=1
+        res+=[m[fila][columna]+m2[fila][columna]]
+        columna+=1
+    return res
+        
