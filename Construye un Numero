@@ -1,0 +1,27 @@
+#Construir numero
+
+def construir_digitos(lista):
+    res=[]
+    temp=0
+    for x in lista:
+        if x[-1]%2==0:
+            continue
+        else:
+            exp=len(x)-1
+            for y in x:
+                temp+=y*10**exp
+                exp=exp-1
+            res+=[temp]
+            temp=0
+    return res
+                
+                    
+
+
+def octal(n):
+    octal=0
+    while n!=0:
+        octal+=n%8+octal
+        n//=8
+        print('o:',octal)
+    return octal
