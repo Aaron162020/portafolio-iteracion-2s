@@ -1,0 +1,16 @@
+#Suma internos
+#E:Una matriz
+#S: la suma de todos los elementos menos los bordes de cada fila
+#R:Tiene que entrar una matriz
+
+def suma_internos(m):
+    if isinstance(m,list) and len(m)>=2:
+        res=0
+        for x in m:
+            for y in x:
+                if y==x[0] or y==x[-1]:
+                    pass
+                else:
+                    res= res+y
+
+        return res
