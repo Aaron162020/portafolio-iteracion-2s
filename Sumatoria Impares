@@ -1,0 +1,15 @@
+#Sumatoria impares
+#E: Un numero inicial y un numero final   
+#S: La sumatoria desde el numero inicial hasta el numero final
+#R: Los datos entrantes deben de ser enteros 
+def sumatoria_Imp(i,f):
+    res=0
+    while i<=f:
+        if i%2==0:
+            i+=1
+            continue
+        else:
+            i+=1
+            res+=i
+            
+    return res
