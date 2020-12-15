@@ -1,0 +1,10 @@
+#Ordena Numero
+#E:Un numero
+#S:Una lista con los datos del numero entrante de manera ordenados ascendente 
+#R:
+
+def ordena_numero(n):
+    res=[]
+    temp=str(n)
+    for y in temp :
+        print(y)
