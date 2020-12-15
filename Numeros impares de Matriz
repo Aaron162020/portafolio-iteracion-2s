@@ -1,0 +1,32 @@
+#Consigue los numeros impares de una matriz y los coloca en una lista
+def aplana_impares(m):
+    res=[]
+    for x in m:
+        for y in x:
+            if y%2==1:
+                res+=[y]
+    return res
+
+def m_prueba(m):
+    matriz=aplana_impares(m) #Matriz con solo sus elementos impares en una lista
+    cont=1
+    temp=[]
+    res=[]
+    largo=len(matriz)
+
+    fila=1
+    while(fila*fila)<=largo:
+        fila+=1
+    fila--1
+    columna=fila
+    for x in matriz:    
+        if cont==3:
+            cont=1
+            temp+=[x]
+            res+=[temp]
+
+            temp=[]
+        else:
+            temp+=[x]
+            cont+=1
+    return res
