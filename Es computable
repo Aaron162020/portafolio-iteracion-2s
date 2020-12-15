@@ -1,0 +1,44 @@
+#Es computable.
+def es_computable(numero):
+    if isinstance(numero,int) and numero>=0:
+        if impares(numero)==True:
+            return sistema_quinario(numero)
+        else:
+            print("Error en cantidad de impares solicitados")
+    else:
+        print("Error en parámetros de entrada")
+        
+def impares(numero):
+    cont=0
+    cantidad=largo(numero)//2
+    print(cantidad)
+    num=str(numero)
+    for x in num:
+        if int(x)%2!=0:
+            cont+=1
+        elif int(x)%2==0:
+            pass
+    if cont>=cantidad:
+        return True
+    else:
+        return False
+        
+def sistema_quinario(numero):
+    if isinstance(numero,int) and (numero>=0):
+        return Base5(numero)
+    else:
+        print("El número debe ser un entero positivo")
+def Base5(numero):
+    resultado=""
+    while numero!=0:
+        resultado=str(numero%5)+resultado
+        numero//=5
+    return Respuesta(resultado)
+
+def Respuesta(resultado):
+    print(resultado)
+    if resultado[0]!=resultado[-1]:
+        return False
+    else:
+        return True            
+    
