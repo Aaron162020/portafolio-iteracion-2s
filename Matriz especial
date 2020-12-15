@@ -1,0 +1,14 @@
+#Datos Matriz especial
+#Retorna los datos de su diagonal, de izquierda a derecha
+#R: La matriz debe de ser cuadrada
+#E: Una matriz
+#S: Los datos que se encuentran en la diagonal de la matriz en una lista
+
+def matriz_diagonal(m):
+    res=[]
+    cont=0 #Fila/Columna
+    largo=len(m)
+    while cont!=largo:
+        res+=[m[cont][cont]]
+        cont+=1
+    return res
